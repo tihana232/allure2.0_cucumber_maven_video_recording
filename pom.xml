@@ -80,8 +80,7 @@
                     </argLine>
 
                     <systemPropertyVariables>
-                        <allure.results.directory>target/allure-results</allure.results.directory>-->
-                        <allure.report.directory>target/allure-report</allure.report.directory>
+                        <allure.results.directory>target/allure-results</allure.results.directory>
                     </systemPropertyVariables>
 
                 </configuration>
