@@ -16,8 +16,12 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
 import org.testng.Assert;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
+import java.util.Properties;
 
 /**
  * Created by ASUS on 29.08.2017.
@@ -33,7 +37,8 @@ public class LoginStepdefs {
     private static final Logger log = Logger.getLogger(LoginStepdefs.class);
 
     @Before
-    public void setUp() throws MalformedURLException {
+    public void setUp() throws IOException {
+
         login = new LoginPage(Driver.getDriver());
         home = new HomePage(Driver.getDriver());
         screen = new AllureAttachment(Driver.getDriver());
