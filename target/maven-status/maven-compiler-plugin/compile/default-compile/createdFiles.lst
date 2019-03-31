@@ -1,0 +1,5 @@
+com/project/helper/AllureAttachment.class
+com/project/webdriver/Driver.class
+com/project/pages/HomePage.class
+com/project/pages/BasePage.class
+com/project/pages/LoginPage.class

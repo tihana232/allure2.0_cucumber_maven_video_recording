@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 
 @CucumberOptions(
         features = {"src/test/resources/features"},
-        tags = {"@1,@2"}
+        tags = {"@1"}
 )
 public class CucumberJvmTest extends AbstractTestNGCucumberTests {
 }

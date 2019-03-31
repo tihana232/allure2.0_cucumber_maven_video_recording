@@ -45,7 +45,7 @@ public class LanguageStepdefs {
 
     @When("^Enters UserName as \"([^\"]*)\" and Password as \"([^\"]*)\"$")
     public void entersUserNameAsAndPasswordAs(String username, String password) throws Throwable {
-        login.loginOnSite(username, password);
+   //     login.loginOnSite(username, password);
         log.info("User logged in");
     }
 

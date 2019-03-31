@@ -1,6 +1,6 @@
 package com.project.pages;
 
-import com.project.webdriver.Driver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -44,6 +44,4 @@ public class BasePage {
     public void openUrl(String url) {
         driver.get(url);
     }
-
-
 }

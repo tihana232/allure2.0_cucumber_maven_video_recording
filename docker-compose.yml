@@ -1,17 +1,23 @@
-hub:
-  image: selenium/hub
-  ports:
-    - "4444:4444"
-  environment:
-    - GRID_MAX_SESSION=10
- 
-firefoxdebug:
-  image: selenium/node-firefox-debug:2.52.0
-  ports:
-    - 9000:5900
-  environment:
-    - NODE_MAX_INSTANCES=10
-    - NODE_MAX_SESSION=10
-  links:
-    - hub
-
+version: '3'
+services:
+  selenoid:
+    image: "aerokube/selenoid"
+    network_mode: bridge
+    ports:
+      - "4444:4444"
+    volumes:
+      - "$PWD:/etc/selenoid"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "$PWD:/opt/selenoid/video"
+      - "$PWD:/opt/selenoid/logs"
+    environment:
+      - OVERRIDE_VIDEO_OUTPUT_DIR=$PWD
+    command: ["-conf", "/etc/selenoid/browsers.json", "-video-output-dir", "/opt/selenoid/video", "-log-output-dir", "/opt/selenoid/logs"]
+  selenoid-ui:
+    image: "aerokube/selenoid-ui"
+    network_mode: bridge
+    links:
+      - selenoid
+    ports:
+      - "8080:8080"
+    command: ["--selenoid-uri", "http://selenoid:4444"]
