@@ -7,7 +7,7 @@ Repository provide configuration example of Allure2.0 with Maven
 
 ---
 
-**The main idea was taken from this dude: The main idea was taken from this dude =)**
+**The main idea was taken from this dude =)**
 
 https://github.com/simple-elf?tab=repositories
 
