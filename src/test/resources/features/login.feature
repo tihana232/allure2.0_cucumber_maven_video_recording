@@ -1,7 +1,7 @@
 @1
 Feature: LoginFeature feature
 
-  @ORPHAN @MANUAL
+  @ORPHAN
   Scenario Outline: SuccessfulLogin
     Given User on Login page
     When Enters UserName as <email/telephone> and Password as <password>
