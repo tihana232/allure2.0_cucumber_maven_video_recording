@@ -1,4 +1,4 @@
 Feature: mysuperFeature
 
-  @ORPHAN
+  @ORPHAN @MANUAL
   Scenario: PavelCodeStorage
